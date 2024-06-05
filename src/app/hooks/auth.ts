@@ -1,6 +1,6 @@
 import useSWR from "swr";
 import axios from "@/lib/axios";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import { useParams, useRouter } from "next/navigation";
 
 interface AuthProps {
@@ -131,13 +131,14 @@ export const useAuth = ({
       .then((response) => setStatus(response.data.status));
   };
 
-  const logout = async () => {
-    if (!error) {
-      await axios.post("/logout").then(() => mutate());
-    }
+const logout = useCallback(async () => {
+  if (!error) {
+    await axios.post("/logout").then(() => mutate());
+  }
 
-    window.location.pathname = "/login";
-  };
+  window.location.pathname = "/login";
+}, [error, mutate]);
+
 
   useEffect(() => {
     if (middleware === "guest" && redirectIfAuthenticated && user) {

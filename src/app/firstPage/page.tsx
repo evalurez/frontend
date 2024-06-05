@@ -14,12 +14,12 @@ const FirstPage = () => {
           </span>
         </h1>
         <p className="">
-          Struggling to get your resume noticed in today's competitive job
+          Struggling to get your resume noticed in today&apos;s competitive job
           market? Evalurez is an AI-powered platform that analyzes your resume,
           providing insights and a score to help you stand out. With Evalurez,
-          you'll get actionable feedback to tailor your resume for recruiters,
-          increasing your chances of landing your dream job. Get started today
-          and Upload your resume for a free analysis!
+          you&apos;ll get actionable feedback to tailor your resume for
+          recruiters, increasing your chances of landing your dream job. Get
+          started today and Upload your resume for a free analysis!
         </p>
         <Link href="/evaluateResume" className="inline-block group mr-9">
           <div>

@@ -59,8 +59,8 @@ export default function Second() {
               <div className={styles.innerContent}>
                 Join the Evalurez Community
                 <div className={styles.description}>
-                  Sign up now to take advantage of Evalurez's powerful features
-                  and unlock new opportunities for career advancement.
+                  Sign up now to take advantage of Evalurez&apos;s powerful
+                  features and unlock new opportunities for career advancement.
                 </div>
               </div>
             </div>

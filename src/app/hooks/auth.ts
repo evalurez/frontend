@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import axios from "axios";
+import axios from "@/lib/axios";
 import { useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 
@@ -152,7 +152,7 @@ export const useAuth = ({
     if (middleware === "auth" && error) {
       logout();
     }
-  }, [user, error]);
+  }, [user, error, logout, middleware, redirectIfAuthenticated, router]);
 
   return {
     user,
